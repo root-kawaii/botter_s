@@ -50,7 +50,7 @@ async def inline_news(update: Update, context: ContextTypes.DEFAULT_TYPE):
     print(ret[0])
 
 async def unknown(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await context.bot.send_message(chat_id=update.effective_chat.id, text="Sorry, I didn't understand that command.")
+    await context.bot.send_message(chat_id=update.effective_chat.id, text="Sorry, I didn't understand that command.\nTry using the /news command followed by a keyword")
 
 if __name__ == '__main__':
     application = ApplicationBuilder().token(tok).build()
